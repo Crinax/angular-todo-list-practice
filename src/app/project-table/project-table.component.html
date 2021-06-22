@@ -1,0 +1,28 @@
+<mat-grid-list cols="3" class="project-grid">
+    <mat-grid-tile *ngFor="let project of projects" class="project-element-wrapper project-element-wrapper-{{ project.getId() }}">
+        <!-- <mat-grid-tile-header class="project__header project-header-{{ project.getId() }}">
+            {{ project.getTitle() }}
+        </mat-grid-tile-header>
+        <mat-selection-list class="project__todo-wrapper todo-wrapper-{{ project.getId() }}">
+            <mat-list-option *ngFor="let todo of project.getTodos()" class="project__todo todo-element-{{ todo.getId() }}" checkboxPosition="before" selected="{{ todo.isCompleted() }}">
+                {{ todo.getText() }}
+            </mat-list-option>
+        </mat-selection-list> -->
+        <mat-card class="project-element project-element-{{ project.getId() }}">
+            <mat-card-header class="project__header project-header-{{ project.getId() }}">
+                <mat-card-title class="project-header__title project-header-{{ project.getId() }}">
+                    {{ project.getTitle().toUpperCase() }}
+                </mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="project-selection-wrapper">
+                <mat-selection-list class="project__todo-wrapper todo-wrapper-{{ project.getId() }}">
+                    <mat-list-option *ngFor="let todo of project.getTodos()" class="project__todo todo-element-{{ todo.getId() }}" checkboxPosition="before" selected="{{ todo.isCompleted() }}" (click)="changeState(todo.getId(), project.getId(), !todo.isCompleted())" color="primary">
+                        <s *ngIf="todo.isCompleted(); else elseBlock">{{ todo.getText() }}</s>
+                        <ng-template #elseBlock>{{ todo.getText() }}</ng-template>
+                    </mat-list-option>
+                </mat-selection-list>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

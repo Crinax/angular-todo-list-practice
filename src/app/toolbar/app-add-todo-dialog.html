@@ -1,0 +1,17 @@
+<h2 mat-dialog-title class="dialog-header">НОВАЯ ЗАДАЧА</h2>
+<mat-divider></mat-divider>
+<div mat-dialog-content class="dialog-content">
+    <form [formGroup]="reactiveForm" (submit)="onSubmit()" class="dialog-form">
+        <input type="text" class="dialog-form__field todo-name" formControlName="todo_name" placeholder="Название задачи...">
+        <select class="dialog-form__field project-select" formControlName="project" (input)="inputHandler()">
+            <option hidden selected value="">Категория</option>
+            <option *ngFor="let project of projects" value="{{ project.getId() }}">{{ project.getTitle() }}</option>
+            <option value="new">Новая категория...</option>
+        </select>
+        <input type="hidden" class="dialog-form__field category-name" formControlName="category_name" placeholder="Название категории...">
+        <div class="dialog-form__buttons form-buttons">
+            <button mat-flat-button class="form-buttons__btn btn-cancel" (click)="closeEvent()" color="warn">ОТМЕНА</button>
+            <button type="submit" mat-flat-button color="primary" class="form-buttons__btn btn-ok">ОК</button>
+        </div>
+    </form>
+</div>

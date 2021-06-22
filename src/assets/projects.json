@@ -1,0 +1,69 @@
+[{
+    "id": 1,
+    "title": "Семья",
+    "todos": [{
+        "id": 1,
+        "text": "Купить молоко",
+        "is_completed": false
+    }, {
+        "id": 2,
+        "text": "Заменить масло в двигателе до 23 апреля",
+        "is_completed": false
+    }, {
+        "id": 3,
+        "text": "Отправить письмо бабушке",
+        "is_completed": true
+    }, {
+        "id": 4,
+        "text": "Заплатить за квартиру",
+        "is_completed": false
+    }, {
+        "id": 5,
+        "text": "Забрать обувь из ремонта",
+        "is_completed": false
+    }]
+}, {
+    "id": 2,
+    "title": "Работа",
+    "todos": [{
+        "id": 6,
+        "text": "Позвонить заказчику",
+        "is_completed": true
+    }, {
+        "id": 7,
+        "text": "Отправить документы",
+        "is_completed": true
+    }, {
+        "id": 8,
+        "text": "Заполнить отчет",
+        "is_completed": false
+    }, {
+        "id": 11,
+        "text": "Отправить проект",
+        "is_completed": true
+    }]
+}, {
+    "id": 3,
+    "title": "Прочее",
+    "todos": [{
+        "id": 9,
+        "text": "Позвонить другу",
+        "is_completed": false
+    }, {
+        "id": 10,
+        "text": "Подготовиться к поездке",
+        "is_completed": false
+    }]
+}, {
+    "id": 4,
+    "title": "Самообразование",
+    "todos": [{
+        "id": 12,
+        "text": "Выучить Ruby ",
+        "is_completed": false
+    }, {
+        "id": 13,
+        "text": "Прочесть документацию Ruby on Rails",
+        "is_completed": false
+    }]
+}]
